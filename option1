@@ -1,0 +1,40 @@
+ 1. import java.util.Scanner;
+ 2.  
+ 3. public class Main {
+ 4. public static void main(String[] args) {
+ 5. Scanner input = new Scanner(System.in); // Creates Scanner Object
+ 6. double[] numbers = new double[5]; // Creates doubles array/class
+ 7.  
+ 8 // Establish User Input
+ 9. for (int i = 0; i < numbers.length; i++) {
+10. System.out.print("Enter a number: "); 
+11. numbers[i] = input.nextDouble(); // Establishes next double
+12. }
+13.  
+14. double total = 0; // print total
+15. double max = numbers[0]; // print max
+16. double min = numbers[0]; // print min
+17. double average = 0; // print average
+18. // Calculate totals
+19. for (int i = 0; i < numbers.length; i++) {
+20. total += numbers[i]; // total + established number
+21. if (numbers[i] > max) { //number > max
+22. max = numbers[i];
+23. }
+24. if (numbers[i] < min) { // number < min
+25. min = numbers[i];
+26. }
+27. }
+28.  
+29. average = total / numbers.length; // Claculate average 
+30.  
+31. System.out.println("Total: " + total);
+32. System.out.println("Average: " + average);
+33. System.out.println("Maximum: " + max);
+34. System.out.println("Minimum: " + min);
+35. System.out.println("Interest on total at 20%: " + (total * 0.2));
+36.  
+37. input.close();
+38. }
+39. }
+40.  
